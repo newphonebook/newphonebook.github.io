@@ -173,6 +173,9 @@ jQuery(document).ready(function() {
 	});
 	$('.contact-form form').submit(function(e) {
 		e.preventDefault();
+        $('.contact-form form .success-message').hide();
+        $('.contact-form form .error-message').hide();
+
 	    $('.contact-form form input[type="text"], .contact-form form textarea').removeClass('contact-error');
 	    var postdata = $('.contact-form form').serialize();
 	    $.ajax({
@@ -181,23 +184,32 @@ jQuery(document).ready(function() {
 	        data: postdata,
 	        dataType: 'json',
 	        success: function(json) {
-	            if(json.emailMessage != '') {
-	                $('.contact-form form .contact-email').addClass('contact-error');
-	            }
-	            if(json.subjectMessage != '') {
-	                $('.contact-form form .contact-subject').addClass('contact-error');
-	            }
-	            if(json.messageMessage != '') {
-	                $('.contact-form form textarea').addClass('contact-error');
-	            }
-	            if(json.emailMessage == '' && json.subjectMessage == '' && json.messageMessage == '') {
-	                $('.contact-form form').fadeOut('fast', function() {
-	                    $('.contact-form').append('<p>Thanks for contacting us! We will get back to you very soon.</p>');
-	                    // reload background
-	    				$('.contact-container').backstretch("resize");
-	                });
-	            }
-	        }
+                $('.contact-form form').fadeOut('fast', function() {
+                    $('.contact-form').append('<p>Thanks for contacting us! We will get back to you very soon.</p>');
+                    // reload background
+                    $('.contact-container').backstretch("resize");
+                });
+                /*$('.success-message').hide();
+                $('.contact-form form').hide();*/
+
+                $('.contact-form form .success-message').html("An Email has been sent.");
+                $('.contact-form form .success-message').fadeIn();
+	        },
+            error: function(data,jqXHR, errorThrown){
+                if($('.contact-form form input[name="name"]').value == '') {
+                    $('.contact-form form .contact-email').addClass('contact-error');
+                }
+                if($('.contact-form form input[name="_subject"]').value == '') {
+                    $('.contact-form form .contact-subject').addClass('contact-error');
+                }
+                if($('.contact-form form input[name="message"]').value == '') {
+                    $('.contact-form form textarea').addClass('contact-error');
+                }
+
+
+                $('.contact-form form .error-message').text("Unable to send Email.")
+                $('.contact-form form .error-message').show();
+            }
 	    });
 	});
 
