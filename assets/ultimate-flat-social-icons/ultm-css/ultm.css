@@ -77,6 +77,9 @@
 .ultm-github-1, 
 .ultm-github-1.ultm-gray-to-color:hover { background-color: #b3b3b3; }
 
+.ultm-github-2,
+.ultm-github-2.ultm-gray-to-color:hover { background-color: #b3b3b3; }
+
 .ultm-stumbleupon, 
 .ultm-stumbleupon.ultm-gray-to-color:hover { background-color: #ff7144; }
 
@@ -144,6 +147,7 @@
 .ultm-32.ultm-deviantart { background-image: url(../ultm-bg-images/20x20/deviantart.png); }
 .ultm-32.ultm-wordpress { background-image: url(../ultm-bg-images/20x20/wordpress.png); }
 .ultm-32.ultm-github-1 { background-image: url(../ultm-bg-images/20x20/github-1.png); }
+.ultm-32.ultm-github-2 { background-image: url(../ultm-bg-images/20x20/github-2.png); }
 .ultm-32.ultm-stumbleupon { background-image: url(../ultm-bg-images/20x20/stumbleupon.png); }
 .ultm-32.ultm-behance { background-image: url(../ultm-bg-images/20x20/behance.png); }
 .ultm-32.ultm-tumblr { background-image: url(../ultm-bg-images/20x20/tumblr.png); }
@@ -179,6 +183,7 @@ only screen and (min-device-pixel-ratio: 1.5) {
 	.ultm-32.ultm-deviantart { background-image: url(../ultm-bg-images/40x40/deviantart.png); }
 	.ultm-32.ultm-wordpress { background-image: url(../ultm-bg-images/40x40/wordpress.png); }
 	.ultm-32.ultm-github-1 { background-image: url(../ultm-bg-images/40x40/github-1.png); }
+    .ultm-32.ultm-github-2 { background-image: url(../ultm-bg-images/40x40/github-2.png); }
 	.ultm-32.ultm-stumbleupon { background-image: url(../ultm-bg-images/40x40/stumbleupon.png); }
 	.ultm-32.ultm-behance { background-image: url(../ultm-bg-images/40x40/behance.png); }
 	.ultm-32.ultm-tumblr { background-image: url(../ultm-bg-images/40x40/tumblr.png); }
