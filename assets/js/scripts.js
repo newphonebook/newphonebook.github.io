@@ -176,7 +176,28 @@ jQuery(document).ready(function() {
         $('.contact-form form .success-message').hide();
         $('.contact-form form .error-message').hide();
 
-	    $('.contact-form form input[type="text"], .contact-form form textarea').removeClass('contact-error');
+        var invalidDetails = false;
+        if($('.contact-form form input[name="name"]').value == '') {
+            $('.contact-form form .contact-email').addClass('contact-error');
+            invalidDetails = true;
+        }
+        if($('.contact-form form input[name="_subject"]').value == '') {
+            $('.contact-form form .contact-subject').addClass('contact-error');
+            invalidDetails = true;
+        }
+        if($('.contact-form form input[name="message"]').value == '') {
+            $('.contact-form form textarea').addClass('contact-error');
+            invalidDetails = true;
+        }
+
+        if (invalidDetails){
+            $('.contact-form form .error-message').text("Error Sending Email.")
+            $('.contact-form form .error-message').show();
+            return;
+        }
+
+
+        $('.contact-form form input[type="text"], .contact-form form textarea').removeClass('contact-error');
 	    var postdata = $('.contact-form form').serialize();
 	    $.ajax({
 	        type: 'POST',
@@ -193,16 +214,6 @@ jQuery(document).ready(function() {
                 $('.contact-form form').hide();*/
 	        },
             error: function(data,jqXHR, errorThrown){
-                if($('.contact-form form input[name="name"]').value == '') {
-                    $('.contact-form form .contact-email').addClass('contact-error');
-                }
-                if($('.contact-form form input[name="_subject"]').value == '') {
-                    $('.contact-form form .contact-subject').addClass('contact-error');
-                }
-                if($('.contact-form form input[name="message"]').value == '') {
-                    $('.contact-form form textarea').addClass('contact-error');
-                }
-
 
                 $('.contact-form form .error-message').text("Error Sending Email.")
                 $('.contact-form form .error-message').show();
