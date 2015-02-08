@@ -226,7 +226,7 @@
 			o.tweet_time = parse_date(item.created_at);
 			o.join_text = s.join_text == "auto" ? build_auto_join_text(item.text) : s.join_text;
 			o.tweet_id = item.id_str;
-			o.twitter_base = "http://"+s.twitter_url+"/";
+			o.twitter_base = "https://"+s.twitter_url+"/";
 			o.user_url = o.twitter_base+o.screen_name;
 			o.tweet_url = o.user_url+"/status/"+o.tweet_id;
 			o.reply_url = o.twitter_base+"intent/tweet?in_reply_to="+o.tweet_id;

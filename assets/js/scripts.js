@@ -106,7 +106,7 @@ jQuery(document).ready(function() {
 	*/
 	$('.latest-tweets .tweets').tweet({
 		modpath: 'http://newphonebook.herokuapp.com/twitter/',
-		username: 'ningsuhen',
+		username: 'newphonebook',
 		page: 1,
 		count: 5,
 		loading_text: 'Loading ...'
