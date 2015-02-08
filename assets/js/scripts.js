@@ -137,7 +137,7 @@ jQuery(document).ready(function() {
 	*/
 	$('.success-message').hide();
 	$('.error-message').hide();
-	
+	/*
 	$('.subscribe form').submit(function(e) {
 		e.preventDefault();
 	    var postdata = $('.subscribe form').serialize();
@@ -162,11 +162,12 @@ jQuery(document).ready(function() {
 	            }
 	        }
 	    });
-	});
+	});*/
 	
 	/*
 	    Contact form
 	*/
+    /*
 	$('.contact-form form input[type="text"], .contact-form form textarea').on('focus', function() {
 		$('.contact-form form input[type="text"], .contact-form form textarea').removeClass('contact-error');
 	});
@@ -199,6 +200,6 @@ jQuery(document).ready(function() {
 	        }
 	    });
 	});
-    
+    */
 });
 
