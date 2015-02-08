@@ -167,7 +167,7 @@ jQuery(document).ready(function() {
 	/*
 	    Contact form
 	*/
-    /*
+
 	$('.contact-form form input[type="text"], .contact-form form textarea').on('focus', function() {
 		$('.contact-form form input[type="text"], .contact-form form textarea').removeClass('contact-error');
 	});
@@ -177,7 +177,7 @@ jQuery(document).ready(function() {
 	    var postdata = $('.contact-form form').serialize();
 	    $.ajax({
 	        type: 'POST',
-	        url: 'assets/contact.php',
+	        url: '//formspree.io/contact@newphonebook.io',
 	        data: postdata,
 	        dataType: 'json',
 	        success: function(json) {
@@ -200,6 +200,6 @@ jQuery(document).ready(function() {
 	        }
 	    });
 	});
-    */
+
 });
 
