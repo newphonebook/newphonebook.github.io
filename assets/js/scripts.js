@@ -106,10 +106,10 @@ jQuery(document).ready(function() {
 	*/
 	$('.latest-tweets .tweets').tweet({
 		modpath: 'assets/twitter/',
-		username: 'anli_zaimi',
+		username: 'ningsuhen',
 		page: 1,
 		count: 5,
-		loading_text: 'loading ...'
+		loading_text: ''
 	});
 	
 	$('.latest-tweets .tweets .tweet_list li').append('<span class="tweet_nav"></span>');
@@ -177,7 +177,7 @@ jQuery(document).ready(function() {
         $('.contact-form form .error-message').hide();
 
         var invalidDetails = false;
-        if($('.contact-form form input[name="name"]').value == '') {
+        if($('.contact-form form input[name="email"]').value == '') {
             $('.contact-form form .contact-email').addClass('contact-error');
             invalidDetails = true;
         }
