@@ -105,11 +105,11 @@ jQuery(document).ready(function() {
 	    Show latest tweets
 	*/
 	$('.latest-tweets .tweets').tweet({
-		modpath: 'assets/twitter/',
+		modpath: 'http://newphonebook.herokuapp.com/twitter/',
 		username: 'ningsuhen',
 		page: 1,
 		count: 5,
-		loading_text: ''
+		loading_text: 'Loading ...'
 	});
 	
 	$('.latest-tweets .tweets .tweet_list li').append('<span class="tweet_nav"></span>');
