@@ -191,9 +191,6 @@ jQuery(document).ready(function() {
                 });
                 /*$('.success-message').hide();
                 $('.contact-form form').hide();*/
-
-                $('.contact-form form .success-message').html("An Email has been sent.");
-                $('.contact-form form .success-message').fadeIn();
 	        },
             error: function(data,jqXHR, errorThrown){
                 if($('.contact-form form input[name="name"]').value == '') {
@@ -207,7 +204,7 @@ jQuery(document).ready(function() {
                 }
 
 
-                $('.contact-form form .error-message').text("Unable to send Email.")
+                $('.contact-form form .error-message').text("Error Sending Email.")
                 $('.contact-form form .error-message').show();
             }
 	    });
